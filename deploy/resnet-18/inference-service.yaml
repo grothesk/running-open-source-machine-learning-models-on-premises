@@ -1,0 +1,11 @@
+apiVersion: "serving.kserve.io/v1beta1"
+kind: "InferenceService"
+metadata:
+  name: "resnet-18"
+spec:
+  predictor:
+    minReplicas: 1
+    maxReplicas: 3
+    serviceAccountName: sa
+    pytorch:
+      storageUri: "s3://models/torchserve/resnet-18/1.0"
