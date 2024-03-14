@@ -30,7 +30,7 @@ stop-torchserve:
 	pipenv run torchserve --stop
 
 .PHONY: infer-torchserve
-infer-trochserve:
+infer-torchserve:
 	curl http://127.0.0.1:8080/predictions/resnet-18 -T ./images/${IMAGE}.jpg
 
 .PHONY: create-model-buckets
@@ -43,6 +43,10 @@ create-model-buckets:
 upload-model-files:
 	mc cp model/config/config.properties model-storage/models/torchserve/resnet-18/1.0/config/config.properties 
 	mc cp model/model-store/resnet-18.mar model-storage/models/torchserve/resnet-18/1.0/model-store/resnet-18.mar
+
+.PHONY: deploy-inference-service 
+deploy-inference-service:
+	kubectl apply -k deploy/resnet-18
 
 .PHONY: convert-jpg-to-json
 convert-jpg-to-json:
