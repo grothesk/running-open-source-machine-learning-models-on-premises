@@ -10,7 +10,7 @@ The slides can be found [here](./presentation/).
 
 ### Requirements
 
-* to set up the local Kubernetes cluster that is required to run the demo, follow the instructions on [https://github.com/grothesk/kserve-on-minikube](https://github.com/grothesk/kserve-on-minikube)
+* to set up the local Kubernetes cluster that is required to run the demo, follow the instructions on [https://github.com/grothesk/kserve-on-minikube](https://github.com/grothesk/kserve-on-minikube) or [https://github.com/deepshore/kserve-locally/tree/docker-desktop](https://github.com/deepshore/kserve-locally/tree/docker-desktop) - or use a regular cluster and adapt the Makefile accordingly.
 * ensure the MinIO client has been installed: [https://min.io/docs/minio/linux/reference/minio-mc.html](https://min.io/docs/minio/linux/reference/minio-mc.html)
 * install the required Python packages via `pipenv`:
 ```bash
