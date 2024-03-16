@@ -1,7 +1,7 @@
 namespace: examples
 
 resources:
- # - namespace.yaml
+ - namespace.yaml
  - secret.yaml
  - service-account.yaml
  - inference-service.yaml

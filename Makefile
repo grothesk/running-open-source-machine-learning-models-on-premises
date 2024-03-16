@@ -2,7 +2,7 @@ MODEL_NAME ?= resnet-18
 MODEL_SERVICE ?= "" 
 MODEL_PATH := ${MODEL_NAME}
 
-IMAGE ?= kitten
+IMAGE ?= dog
 
 CLUSTER_NAME := kserve.minikube
 
@@ -52,12 +52,15 @@ deploy-inference-service:
 convert-jpg-to-json:
 	pipenv run python scripts/tobytes.py images/${IMAGE}.jpg
 
-.PHONY: infer-resnet
-infer-resnet:
+.PHONY: classify-picture-of-cute-animal
+classify-picture-of-cute-animal:
 	curl -v http://resnet-18-predictor.examples.${CLUSTER_NAME}/v1/models/resnet-18:predict \
     -H 'accept: application/json' -H 'Content-Type: application/json' \
     --data @./images/${IMAGE}.json | jq 
 
 .PHONY: clean-project
 clean-project:
+	kubectl delete -k deploy/resnet-18
 	rm images/*.json
+	rm model/model-store/resnet-18.mar
+	
