@@ -1,6 +1,6 @@
 # Running Open-Source Machine-Learning Models On-Premises
 
-Material for the Talk at [ETIM 2024](https://etim.uk-essen.de/)
+Material for the talk at [ETIM 2024](https://etim.uk-essen.de/)
 
 ## Presentation
 
