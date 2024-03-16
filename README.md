@@ -12,7 +12,7 @@ The slides can be found [here](./presentation/).
 
 * to set up the local Kubernetes cluster that is required to run the demo, follow the instructions on [https://github.com/grothesk/kserve-on-minikube](https://github.com/grothesk/kserve-on-minikube)
 * ensure the MinIO client has been installed: [https://min.io/docs/minio/linux/reference/minio-mc.html](https://min.io/docs/minio/linux/reference/minio-mc.html)
-* install the required Python packages:
+* install the required Python packages via `pipenv`:
 ```bash
 pipenv sync
 ```
