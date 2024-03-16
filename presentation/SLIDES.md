@@ -82,8 +82,8 @@ KServe
 
 ### Steps 
 
-1) Preparing the model files: create a MAR file so that torchserve can work with the model
-2) Upload the MAR file 
+1) Preparing the model files: create a MAR file so that torchserve can work with the model.
+2) Upload the MAR file.
 3) Creating an InferenceService with references to the location of the model and the model serving runtime to be used.
 4) Prepare and classify images via HTTP requests.
 
@@ -103,4 +103,3 @@ KServe
 * Kubernetes: [https://kubernetes.io/](https://kubernetes.io/)
 * KServe: [https://kserve.github.io/website/0.11/](https://kserve.github.io/website/0.11/)
 * Resnet: [https://pytorch.org/hub/pytorch_vision_resnet/](https://pytorch.org/hub/pytorch_vision_resnet/)
-* 
