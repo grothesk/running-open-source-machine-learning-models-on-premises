@@ -37,9 +37,9 @@ make create-model-buckets upload-model-files
 ```
 
 3. Create an `InferenceService` resource including references to the location of the model files and the model serving runtime to be used: 
-´´´bash
+```bash
 make deploy-inference-service
-´´´
+```
 
 4. Prepare the image of the good boy and classify it via HTTP requests:
 ```bash
